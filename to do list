@@ -1,42 +1,43 @@
 task =[]
 
 def show_menu():
-    Print("\n to do list")
-    Print("1. view list")
-    Print("2. add task")
-    Print("3. remove task")
-    Print("4. exit")
+    print("\n to do list")
+    print("1. view list")
+    print("2. add task")
+    print("3. remove task")
+    print("4. exit")
 
 while True:
   show_menu()
   choice =input("enter your choice(1-4):")
- if choice=="1":
-  if not tasks:
-    print("\NO tasks")
+  if choice=="1":
+     if not tasks:
+     print("\NO tasks")
   else:
-print("your task:")
-for i, task in enumerate(tasks,1):
-   print("f{i}. {task}")
+       print("your task:")
+       for i, task in enumerate(tasks,1):
+            print("f{i}. {task}")
 
  elif choice=="2":
-   task = input("enter a new task")
-   tasks.append(task)
-print("task added!")
+      task = input("enter a new task")==
+      tasks.append(task)
+      print("task added!")
 
   elif choice =="3":
-    if not tasks:
-      print("no tasks to remove")
-    else:
-       for i, task in enumerate(tasks, 1);
-           print(f"{i}, {task}")
-       try:
-          task_num = int(input("enter task number to remove:")
-             removed = tasks.pop(task_num -1)
-             print(f"removed: {removed}")
-          except (ValueError, IndexError):
-             print("invalid task number.")
-    elif choice =="4": 
-         print("exiting")
-         break
-    else:
+      if not tasks:
+            print("no tasks to remove")
+      else:
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}, {task}")
+            try:
+                task_num = int(input("enter task number to remove:"))
+                removed = tasks.pop(task_num -1)
+                print(f"removed: {removed}")
+            except (ValueError, IndexError):
+                print("invalid task number.")
+
+   elif choice =="4": 
+        print("exiting")
+        break
+   else:
        print("ivalid choice, try again")
